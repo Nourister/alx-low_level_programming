@@ -11,7 +11,7 @@ void print_array(int *a, int n)
 /* function that print an element of an array of integer. */
 {
 	int index_of_array;
-       
+
 	for (index_of_array = 0; index_of_array < n; index_of_array++)
 	{
 	printf("%d", a[index_of_array]);
