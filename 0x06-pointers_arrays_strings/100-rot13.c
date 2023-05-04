@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * rot13 - encode a string using rot13.
@@ -16,9 +17,7 @@ char *rot13(char *n)
 
 	for (x = 0; n[x] != '\0'; x++)
 	{
-	i = 0;
-	while (i < 10)
-	i++;
+	for (i = 0; i < 52; i++)
 	{
 	if (n[x] == data1[i])
 	{
