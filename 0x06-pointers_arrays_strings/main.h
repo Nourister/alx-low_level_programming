@@ -27,4 +27,6 @@ void print_buffer(char *b, int size);
 
 char *leet(char *x);
 
+int main(void);
+
 #endif
