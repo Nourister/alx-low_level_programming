@@ -15,12 +15,12 @@ char *_strpbrk(char *s, char *accept)
 {
 	int j, i;
 
-	for(j = 0; s[j] != '\0'; j++)
+	for (j = 0; s[j] != '\0'; j++)
 	{
 	for (i = 0; accept[i] != '\0'; i++)
 	{
 	if (accept[i] == s[j])
-		return (s + j);
+	return (s + j);
 	}
 	}
 	return (NULL);
