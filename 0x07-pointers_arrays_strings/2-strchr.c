@@ -14,7 +14,7 @@ char *_strchr(char *s, char c)
 {
 	int f;
 
-	for (f = 0; s[f] != '\0'; f++)
+	for (f = 0; s[f] >= '\0'; f++)
 	/* compares the first occurence to c. */
 	{
 	if (c == s[f])
