@@ -10,7 +10,7 @@
  */
 
 char *_memcpy(char *dest, char *src, unsigned int n)
-/* a function that copies memory area. */
+/*  a function that copies memory area. */
 {
 	unsigned int j;
 
