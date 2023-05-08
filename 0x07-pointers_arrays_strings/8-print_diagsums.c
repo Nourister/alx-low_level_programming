@@ -10,10 +10,7 @@
  */
 
 void print_diagsums(int *a, int size)
-/**
- * a function that prints the sum of the two diagonals
- * of a square matrix of integers.
- */
+/* a function that prints the sum of the two diagonals of a square. */
 {
 	int j, i, sum_of1 = 0, sum_of2 = 0;
 
