@@ -2,10 +2,11 @@
 #include <stdio.h>
 
 /**
- * _memcpy - copy a block of data from a src address to a dest address
+ * _memcpy - copies memory area
  * @dest: the dest of copy address
  * @src: the source address to copy
- * Rerturn: dest
+ * @n: input
+ * Rerturn: 0(success)
  */
 
 char *_memcpy(char *dest, char *src, unsigned int n)
