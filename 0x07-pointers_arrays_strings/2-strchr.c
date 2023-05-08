@@ -17,7 +17,7 @@ char *_strchr(char *s, char c)
 	for (f = 0; s[f] != '\0'; f++)
 	/* compares the first occurence to c. */
 	{
-	if (s[f] == c)
+	if (c == s[f])
 	/* return pointer to the first occurrence of c. */
 	return (s + f);
 	}
