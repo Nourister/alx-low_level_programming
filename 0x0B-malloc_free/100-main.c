@@ -4,7 +4,8 @@
 
 /**
  * main - check the code for ALX School students.
- *
+ * @ac: argument counter
+ * @av: argumrnt vector
  * Return: Always 0.
  */
 int main(int ac, char *av[])
