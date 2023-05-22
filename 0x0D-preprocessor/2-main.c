@@ -8,7 +8,9 @@
  */
 
 int main(void)
-{	
-	printf("File : %s\n", _FILE_);
+{
+	char _FILE_;
+
+	printf("File :%s\n", _FILE_);
 	return (0);
 }
