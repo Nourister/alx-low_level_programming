@@ -3,7 +3,7 @@
 #include "dog.h"
 
 /**
- * strlen - returns length og a string
+ * _strlen - returns length of a string
  * @c: pointer to a string
  * Return: length of a string
  *
@@ -50,8 +50,8 @@ char *_strcpy(char *dest, char *src)
  * new_dog - creates the new dog
  * @name: name of the dog
  * @age: age of the dog
- * #owner: owner of the dog
- * Return: newdog (success) NULL otherwise 
+ * @owner: owner of the dog
+ * Return: newdog (success) NULL otherwise
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
