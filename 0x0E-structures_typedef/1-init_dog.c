@@ -7,6 +7,7 @@
  * @name: name of the dog
  * @age: age of the dog
  * @owner: dog owner
+ *
  * Description: longer description
  */
 
@@ -14,26 +15,25 @@
  * dog_t - typedef for struct dog
  */
 
-typedef struct dog
+typedef struct dog;
 {
-        char *name;
-        float age;
-        char *owner;
+	char *name;
+	float age;
+	char *owner;
 } dog_t;
 
+/* description of other prototype */
+
 /**
- * init_dog - initialises the struct dog
  * _putchar - print the struct dog
  * @c: the character value
  * Return: value
  */
-/* description of other prototype */
 
 void init_dog(struct dog *d, char *name, float age, char *owner);
-void print_dog(struct dog *d);
+void print dog(struct dog *d);
 int _putchar(char c);
 dog_t *new_dog(char *name, float age, char *owner);
 void free_dog(dog_t *d);
 
-#endif /* DOG_H */
-
+#endif /* DOG */
