@@ -10,19 +10,16 @@
  * Description: longer description
  */
 
-/**
- * dog_t - typedef for struct dog
- */
-
 typedef struct dog
 {
-        char *name;
-        float age;
-        char *owner;
+	char *name;
+	float age;
+	char *owner;
 } dog_t;
 
 /**
  * init_dog - initialises the struct dog
+ * new_dog - creates new dog
  * _putchar - print the struct dog
  * @c: the character value
  * Return: value
