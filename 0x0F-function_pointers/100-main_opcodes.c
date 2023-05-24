@@ -5,7 +5,7 @@
  * main - prints its own opcode
  * @argc: number of arguments
  * @argv: string of an array of arguments
- * Return: 0 (success)
+i * Return: 0 (success)
  */
 
 int main(int argc, char *argv[])
@@ -26,6 +26,7 @@ int main(int argc, char *argv[])
 		printf("Eroor\n");
 		exit(2);
 	}
+
 	s = (char *)main;
 
 	for (n = 0; n < bytes; n++)
