@@ -4,6 +4,7 @@
 /**
  * int_index - returns the index of the first element for
  * which the cmp function does not return 0
+ * @array: pointer to parameter type integer
  * @size: is the number of elements in the array array
  * @cmp: is a pointer to the function to be used to compare values
  * Return: -1 If no element matches, -1 If size <= 0
