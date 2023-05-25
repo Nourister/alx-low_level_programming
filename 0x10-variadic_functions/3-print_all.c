@@ -15,7 +15,7 @@
 void print_all(const char * const format, ...)
 {
 	int n = 0;
-	char *s, * separator = "";
+	char *s, *separator = "";
 
 	va_list my_list;
 
