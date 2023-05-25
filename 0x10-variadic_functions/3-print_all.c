@@ -1,7 +1,6 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
 #include <stdio.h>
-#include <stdlib.h>
 
 /**
  * print_all -  prints anything
@@ -44,10 +43,8 @@ void print_all(const char * const format, ...)
 					break;
 
 				default:
-
-					n++;
+				n++;
 				continue;
-
 			}
 			separator = ",";
 			n++;
