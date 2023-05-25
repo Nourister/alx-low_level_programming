@@ -22,33 +22,33 @@ void print_all(const char * const format, ...)
 
 	if (format)
 	{
-		while (format[n])
-		{
-			switch (format[n])
-			{
-				case 'c':
-					printf("%s%c", separator, va_arg(my_list, int));
-					break;
-				case 'i':
-					printf("%s%d", separator, va_arg(my_list, int));
-					break;
-				case 'f':
-					printf("%s%f", separator, va_arg(my_list, double));
-					break;
-				case 's':
-					s = va_arg(my_list, char *);
-					if (!s)
-						s = "(nil)";
-					printf("%s%s", separator, s);
-					break;
+	while (format[n])
+	{
+	switch (format[n])
+	{
+	case 'c':
+		printf("%s%c", separator, va_arg(my_list, int));
+		break;
+	case 'i':
+		printf("%s%d", separator, va_arg(my_list, int));
+		break;
+	case 'f':
+		printf("%s%f", separator, va_arg(my_list, double));
+		break;
+	case 's':
+		s = va_arg(my_list, char *);
+		if (!s)
+		s = "(nil)";
+		printf("%s%s", separator, s);
+		break;
 
-				default:
-				n++;
-				continue;
-			}
-			separator = ",";
-			n++;
-		}
+		default:
+		n++;
+		continue;
+	}
+		separator = ",";
+		n++;
+	}
 	}
 	printf("\n");
 	va_end(my_list);
