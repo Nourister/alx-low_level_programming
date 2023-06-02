@@ -4,7 +4,7 @@
 /**
  * print_list -  prints all the elements of a list_t list.
  * @list_t - lists of elements
- * @*h: pointer to the modes in the list_t
+ * @h: pointer to the modes in the list_t
  * Return: the number of nodes
  */
 
