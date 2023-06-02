@@ -10,7 +10,7 @@
  */
 int main(void)
 {
-	ist_t *head;
+	list_t *head;
 
 	head = NULL;
 	add_node_end(&head, "Anne");
