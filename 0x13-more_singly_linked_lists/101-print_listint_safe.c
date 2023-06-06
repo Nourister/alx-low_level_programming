@@ -1,33 +1,68 @@
 #include "lists.h"
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
- * print_listint_safe - prints a listint_t linked list.
- * @head: - pointer to a pointer of listint_t list
+ * looped_listint_len - Counts the number of unique nodes
+ * in a looped listint_t linked list.
+ * @head: A pointer to the head of the listint_t to check.
  *
- * Return: the number of nodes in the list
+ * Return: If the list is not looped - 0.
+ *         Otherwise - the number of unique nodes in the list.
  */
+size_t looped_listint_len(const listint_t *head)
+{
+	const listint_t *slow, *fast;
+	size_t counter = 0;
 
+	if (head == NULL)
+		return (0);
+
+	slow = head;
+	fast = head->next;
+
+	while (fast && fast->next)
+	{
+		if (slow == fast)
+		{
+			counter++;
+			slow = head;
+			while (slow != fast->next)
+			{
+				counter++;
+				slow = slow->next;
+				fast = fast->next;
+			}
+			return (counter);
+		}
+		slow = slow->next;
+		fast = fast->next->next;
+	}
+
+	return (0);
+}
+
+/**
+ * print_listint_safe - Prints a listint_t list safely.
+ * @head: A pointer to the head of the listint_t list.
+ *
+ * Return: The number of nodes in the list.
+ */
 size_t print_listint_safe(const listint_t *head)
 {
 	size_t counter = 0;
-	const listint_t *current_node = head;
-	const listint_t *loop_node = find_loop_node(head);
+	size_t loop_length = looped_listint_len(head);
 
-	if (loop_node != NULL)
+	while (head && (loop_length == 0 || counter < loop_length))
 	{
-		printf("-> [%p] %d\n", (void *)current_node, current_node->n);
-		printf("-> ... (loop detected)\n");
-		exit(98);
-	}
-
-	while (current_node != NULL)
-	{
-		printf("[%p] %d\n", (void *)current, current->n);
-		current_node = current_node->next;
+		printf("[%p] %d\n", (void *)head, head->n);
+		head = head->next;
 		counter++;
 	}
 
+	if (loop_length > 0)
+		printf("-> [%p] %d\n", (void *)head, head->n);
+
 	return (counter);
 }
+
