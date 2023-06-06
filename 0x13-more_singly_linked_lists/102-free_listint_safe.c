@@ -23,7 +23,7 @@ size_t free_listint_safe(listint_t **h)
 		temp = current;
 		current = current->next;
 
-        /* Check if current node has been visited before */
+		/* Check if current node has been visited before */
 		if (temp->next == (void *)temp)
 		{
 			*h = NULL;
@@ -31,7 +31,7 @@ size_t free_listint_safe(listint_t **h)
 			break;
 		}
 
-        /* Mark the next node as visited */
+		/* Mark the next node as visited */
 		temp->next = (void *)temp;
 
 		free(temp);
