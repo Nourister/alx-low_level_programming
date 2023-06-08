@@ -12,8 +12,8 @@
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int counter = 0;
-	unsigned int diff = n ^ m;/* XOR operation to get the differing bits */
+	unsigned int counter = 0;
+	unsigned long int diff = n ^ m;/* XOR operation to get the differing bits */
 
 	while (diff != 0)
 	{
