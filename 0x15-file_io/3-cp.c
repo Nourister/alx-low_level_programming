@@ -16,7 +16,8 @@
  *
  * Return: 0(success)
  */
-void print_error(const char *error_message, const char *file_name, int exit_code)
+void print_error(const char *error_message, const char *file_name,
+int exit_code)
 {
 	dprintf(STDERR_FILENO, error_message, file_name);
 	exit(exit_code);
@@ -53,7 +54,8 @@ void copy_file(const char *file_from, const char *file_to)
 	if (fd_from == -1)
 		print_error("Error: Can't read from file %s\n", file_from, 98);
 
-	fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
+	fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR |
+	S_IRGRP | S_IWGRP | S_IROTH);
 	if (fd_to == -1)
 		print_error("Error: Can't write to %s\n", file_to, 99);
 
@@ -71,8 +73,8 @@ void copy_file(const char *file_from, const char *file_to)
 }
 /**
  * main - main function of the program.
- * @argc: counts number of arguments in the program
- * @agrv: number of arguments
+ * @argc: number of command_line arguments in the program
+ * @agrv: An array of pointers to the arguments
  * Return: 0
  */
 int main(int argc, char *argv[])
