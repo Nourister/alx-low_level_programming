@@ -8,6 +8,7 @@
  * a dlistint_t list
  * @head: a double pointer to the first node in dlistint_t
  * list
+ * @n: the value of the element
  * Description: a function that adds a new node at the beginning
  * of a dlistint_t list.
  * Return: the address of the new element, or NULL if it failed
