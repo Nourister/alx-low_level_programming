@@ -11,13 +11,16 @@
 
 int _atoi(char *s)
 {
-	int i, sum = 0;
+	size_t i, len;
+	int sum = 0;
 
 	printf("Enter a string:");
 	fgets(s, 100, stdin);
 
+	len = strlen(s);
+
     /* without using a function. */
-	for (i = 0; i < strlen(s); i++)
+	for (i = 0; i < len; i++)
 	{
 		if (s[i] >= '0' && s[i] <= '9')
 		{
